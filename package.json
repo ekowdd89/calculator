@@ -1,0 +1,46 @@
+{
+  "name": "@ekowdd89/calculator",
+  "version": "0.0.0",
+  "description": "Demo calculator",
+  "main": "dist/calculator.js",
+  "husky":{
+    "hooks":{
+      "commit-msg":"commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:browser": "webpack && cp dist/calculator.js examples/browser",
+    "build:node": "webpack && cp dist/calculator.js examples/node/ && node examples/node/example.js",
+    "semantic-release":"semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekowdd89/calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekowdd89/calculator/issues"
+  },
+  "homepage": "https://github.com/ekowdd89/calculator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.1",
+    "@semantic-release/npm": "^8.0.2",
+    "@semantic-release/release-notes-generator": "^10.0.2",
+    "babel-loader": "^8.2.3",
+    "husky": "^7.0.4",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
